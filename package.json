@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "css-loader": "^6.9.1",
     "glob": "^8.1.0",
+    "style-loader": "^3.3.4",
     "vite": "^4.0.5"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
