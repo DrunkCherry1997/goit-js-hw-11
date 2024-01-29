@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="path/to/your/css/styles.css" />
     <link rel="stylesheet" href="./css/searchimg.css" />
-    <link rel="stylesheet" href="path/to/iziToast.min.css" />
-    <link rel="stylesheet" href="path/to/simple-lightbox.min.css" />
+
     <title>Image Search App</title>
   </head>
   <body>
-    <form class="searchForm">
-      <label for="searchInput"></label>
-      <!-- Замінено input на textarea -->
-      <textarea
-        id="searchInput"
-        class="searchInput"
-        placeholder="Search images"
-      ></textarea>
-      <button type="submit">Search</button>
-    </form>
-    <div class="gallery loader hidden"></div>
+    <div class="app">
+      <form class="searchForm">
+        <label for="searchInput"></label>
+        <!-- Замінено input на textarea -->
+        <textarea
+          id="searchInput"
+          class="searchInput"
+          placeholder="Search images"
+        ></textarea>
+        <button type="submit">Search</button>
+      </form>
+      <div class="loader hidden">Loading...</div>
+      <div class="gallery"></div>
+    </div>
 
-    <script src="path/to/your/js/main.js"></script>
-    <script src="path/to/iziToast.min.js"></script>
-    <script src="path/to/simple-lightbox.min.js"></script>
     <script src="./js/searchimg.js" type="module"></script>
   </body>
 </html>

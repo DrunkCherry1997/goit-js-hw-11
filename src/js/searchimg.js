@@ -5,14 +5,10 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-// Імпорт бібліотеки SimpleLightbox і стилів css-loader
-import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.min.js';
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".searchForm");
   const searchInput = document.querySelector(".searchInput");
-  const loaderOverlay = document.getElementById("loaderOverlay");
+  const loader = document.querySelector(".loader");
   const gallery = document.querySelector(".gallery");
 
   const apiKey = "42055816-5ec499474650eadfc6b07a02f";
@@ -32,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Показати індикатор завантаження перед початком запиту
-    loaderOverlay.classList.remove("hidden");
+    loader.classList.remove("hidden");
     gallery.innerHTML = "";
 
     fetch(`${apiUrl}?key=${apiKey}&q=${searchTerm}&image_type=photo&orientation=horizontal&safesearch=true`)
@@ -71,12 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       })
       .finally(() => {
-        // Сховати індикатор завантаження після завершення запиту
-        loaderOverlay.classList.add("hidden");
+        loader.classList.add("hidden");
       });
   });
 
-  // Функція відображення зображень
   function displayImages(images) {
     const galleryHTML = images
       .map(
@@ -98,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gallery.innerHTML = galleryHTML;
 
-    // Оновити SimpleLightbox після додавання нових зображень
+    // Refresh SimpleLightbox after adding new images
     lightbox.refresh();
   }
 });
