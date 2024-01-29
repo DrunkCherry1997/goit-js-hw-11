@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="path/to/your/css/styles.css" />
     
+
     <title>Image Search App</title>
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers4.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-5b791d57.js">
     <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-cf6910df.css">
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/searchimg-0918ca3f.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/searchimg-8e5f30e3.css">
   </head>
   <body>
     <div class="app">
       <form class="searchForm">
         <label for="searchInput"></label>
-
+        <!-- Замінено input на textarea -->
         <textarea
           id="searchInput"
           class="searchInput"
@@ -23,13 +24,10 @@
         ></textarea>
         <button type="submit">Search</button>
       </form>
-      <div class="loader hidden">Loading images, please wait...</div>
+      <div class="loader hidden">Loading...</div>
       <div class="gallery"></div>
     </div>
 
-    <script src="path/to/your/js/main.js"></script>
-    <script src="path/to/iziToast.min.js"></script>
-    <script src="path/to/simple-lightbox.min.js"></script>
     
   </body>
 </html>
