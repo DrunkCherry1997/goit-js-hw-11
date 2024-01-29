@@ -12,13 +12,14 @@
     <div class="app">
       <form class="searchForm">
         <label for="searchInput"></label>
-        <!-- Замінено input на textarea -->
-        <textarea
+        <!-- Замінено textarea на input -->
+        <input
+          type="text"
           id="searchInput"
           class="searchInput"
           placeholder="Search images"
-        ></textarea>
-        <button type="submit">Search</button>
+        />
+        <button type="submit" class="button">Search</button>
       </form>
 
       <div class="loader hidden">Loading images, wait please...</div>

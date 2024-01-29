@@ -1,3 +1,58 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; /* Забезпечує вирівнювання по вертикалі на весь екран */
+  margin-top: 36px;
+}
+
+.app {
+  text-align: center;
+}
+.searchForm {
+  /* Додайте потрібні стилі для форми, які вам потрібні */
+}
+
+.searchInput {
+  width: 272px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  margin-left: 10px;
+  color: #2e2f42;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding-inline: 8px 16px;
+  /* /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  color: #fff;
+  background: #6c8cff;
+}
+
 *,
 *::before,
 *::after {
@@ -47,7 +102,6 @@ img {
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1000;
