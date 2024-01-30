@@ -34,12 +34,17 @@ body {
   transition-timing-function: linear;
 }
 
+.searchInput:focus,
 .searchInput:active,
-.searchInput:focus {
-  border-radius: 4px;
-  border: 2px solid #4e75ff;
+.searchInput.searchButtonPressed {
+  border-color: #4e75ff;
+}
+
+.searchInput:hover {
+  cursor: pointer;
   background: #fff;
-  color: #2e2f42;
+  color: #000;
+  border: 0.5px solid #000;
 }
 .button {
   color: #fff;
@@ -78,9 +83,9 @@ a {
 }
 
 img {
-  display: block;
-  width: 360px;
-  height: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .gallery {
@@ -100,6 +105,33 @@ img {
 .gallery-item {
   width: calc((100% - 48px) / 3);
 }
+
+.image-details {
+  background-color: #f8f8f8; /* Пример фона для блока с деталями изображения */
+  padding: 10px; /* Пример внутренних отступов для блока с деталями изображения */
+  border-radius: 8px; /* Пример скругления углов для блока с деталями изображения */
+  margin-top: 5px; /* Пример отступа сверху для блока с деталями изображения */
+}
+
+/* Пример стилей для деталей изображения внутри .image-details */
+.image-details p {
+  margin: 5px 0;
+  color: #000;
+}
+
+.likes,
+.views,
+.comments,
+.downloads {
+  font-weight: bold;
+}
+.result-likes,
+.result-views,
+.result-comments,
+.result-downloads {
+  font-weight: normal;
+}
+
 /* Додайте стилі для індикатора завантаження */
 .loader-overlay {
   position: fixed;
