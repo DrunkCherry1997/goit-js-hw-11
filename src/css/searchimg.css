@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh; /* Забезпечує вирівнювання по вертикалі на весь екран */
+  min-height: 100vh;
   margin-top: 36px;
 }
 
@@ -11,7 +11,6 @@ body {
   text-align: center;
 }
 .searchForm {
-  /* Додайте потрібні стилі для форми, які вам потрібні */
 }
 
 .searchInput {
@@ -107,13 +106,12 @@ img {
 }
 
 .image-details {
-  background-color: #f8f8f8; /* Пример фона для блока с деталями изображения */
-  padding: 10px; /* Пример внутренних отступов для блока с деталями изображения */
-  border-radius: 8px; /* Пример скругления углов для блока с деталями изображения */
-  margin-top: 5px; /* Пример отступа сверху для блока с деталями изображения */
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 5px;
 }
 
-/* Пример стилей для деталей изображения внутри .image-details */
 .image-details p {
   margin: 5px 0;
   color: #000;
@@ -132,7 +130,6 @@ img {
   font-weight: normal;
 }
 
-/* Додайте стилі для індикатора завантаження */
 .loader-overlay {
   position: fixed;
   top: 0;
@@ -170,7 +167,6 @@ img {
   }
 }
 
-/* Приховати індикатор завантаження за замовчуванням */
 .loader.hidden {
   display: none;
 }
