@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searchTerm === "") {
       
       iziToast.error({
-        title: "Error",
+          title: "Error",
+          position: "topRight",
         message: "Please enter a search term.",
       });
       return;
@@ -48,7 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data.hits.length === 0) {
          
           iziToast.warning({
-            title: "No Results",
+              title: "No Results",
+              position: "topRight",
             message: "Sorry, there are no images matching your search query. Please try again!",
           });
         } else {
@@ -70,7 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
        
         console.error("Error fetching data:", error);
         iziToast.error({
-          title: "Error",
+            title: "Error",
+            position: "topRight",
           message: "An error occurred while fetching data. Please try again.",
         });
       })
