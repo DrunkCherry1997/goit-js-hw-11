@@ -87,22 +87,23 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayImages(images) {
 
  const galleryHTML = images
-    .map(
-      (image, index) => `
-        <div class="gallery-item">
-          <a href="${image.largeImageURL}" data-lightbox="gallery" data-title="${image.tags}">
-            <img src="${image.webformatURL}" alt="${image.tags}" class="image-thumbnail image-${index + 1}">
-          </a>
-          <div class="image-details image-details-${index + 1}">
-               <p ><b>Likes:</b> <span class="result-likes">${image.likes}</span></p>
-            <p ><b>Views:</b> <span class="result-views">${image.views}</span></p>
-            <p ><b>Comments:</b><span class="result-comments">${image.comments}</span></p>
-            <p ><b>Downloads:</b> <span class="result-downloads">${image.downloads}</span></p>
+ .map(
+        (image) => `
+          <div class="gallery-item">
+            <a href="${image.largeImageURL}" data-lightbox="gallery" data-title="${image.tags}">
+              <img src="${image.webformatURL}" alt="${image.tags}" class="image-thumbnail">
+            </a>
+            <div class="image-details">
+              <p><b>Likes:</b> <span class="result-likes">${image.likes}</span></p>
+              <p><b>Views:</b> <span class="result-views">${image.views}</span></p>
+              <p><b>Comments:</b> <span class="result-comments">${image.comments}</span></p>
+              <p><b>Downloads:</b> <span class="result-downloads">${image.downloads}</span></p>
+            </div>
           </div>
-        </div>
-      `
-    )
-    .join("");
+        `
+      )
+      .join("");
+
 
 
     gallery.innerHTML = galleryHTML;
