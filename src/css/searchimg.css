@@ -117,12 +117,6 @@ img {
   color: #000;
 }
 
-.likes,
-.views,
-.comments,
-.downloads {
-  font-weight: bold;
-}
 .result-likes,
 .result-views,
 .result-comments,
